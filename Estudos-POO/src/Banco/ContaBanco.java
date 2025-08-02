@@ -7,6 +7,15 @@ public class ContaBanco {
     private float saldo;
     private boolean status;
 
+    public void estadoAtual() {
+        System.out.println("===================================");
+        System.out.println("Conta: " + this.getNumConta());
+        System.out.println("Tipo: " + this.getTipo());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("Status: " + this.isStatus());
+    }
+
     public void abrirConta(String tipo) {
         this.setTipo(tipo); 
         this.setStatus(true); // Métodos modificadores de acesso
@@ -31,8 +40,9 @@ public class ContaBanco {
 
     public void depositar(float valor) {
         if (this.isStatus()) {
-            this.setSaldo(this.getSaldo() + valor);
-            System.out.println("Depósito realizado com sucesso.");
+            this.setSaldo(this.getSaldo() + valor); // Trabalhando diretamente com métodos especiais
+            // Modificador de acesso para alterar o saldo
+            System.out.println("Depósito realizado com sucesso." + this.getDono() + " agora tem " + this.getSaldo() + " reais."); 
         } else {
             System.out.println("Conta fechada, não posso depositar.");
         }
@@ -42,7 +52,7 @@ public class ContaBanco {
         if (this.isStatus()) {
             if (this.getSaldo() >= valor) {
                 this.setSaldo(this.getSaldo() - valor);
-                System.out.println("Saque realizado com sucesso.");
+                System.out.println("Saque realizado com sucesso." + this.getDono() + " agora tem " + this.getSaldo() + " reais.");
             } else {
                 System.out.println("Saldo insuficiente para saque.");
             }
@@ -52,7 +62,8 @@ public class ContaBanco {
     }
 
     public void pagarMensal() {
-        int mensalidade = this.getTipo().equals("CC") ? 12 : 20;
+        int mensalidade = this.getTipo().equals("CC") ? 12 : 20; // Define uma nova variável mensalidade de acordo com o tipo de conta
+         // Se for CC, mensalidade é 12, se for CP, mensalidade é 20
         if (this.isStatus()) {
             if (this.getSaldo() >= mensalidade) {
                 this.setSaldo(this.getSaldo() - mensalidade);
@@ -64,6 +75,8 @@ public class ContaBanco {
             System.out.println("Conta fechada, não posso pagar mensalidade.");
         }
     }
+
+    // Métodos Especiais (Construtores, Getters e Setters)
 
     public ContaBanco() {
         this.saldo = 0;
