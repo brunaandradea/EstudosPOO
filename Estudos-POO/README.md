@@ -1,18 +1,24 @@
-## Getting Started
+# 🚀 Curso Java POO – Curso em Vídeo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório contém os exercícios e projetos desenvolvidos durante o curso de **Java POO** ministrado pelo professor **Gustavo Guanabara** na plataforma [Curso em Vídeo](https://www.cursoemvideo.com/).
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 📚 Sobre o Curso
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+O curso aborda os principais conceitos da **Programação Orientada a Objetos (POO)** em Java, como:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Classes e Objetos
+- Atributos e Métodos
+- Encapsulamento
+- Herança
+- Polimorfismo
+- Interfaces
+- Entre outros
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 💻 Estrutura do Repositório
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Os arquivos estão organizados por aulas ou seções, com os códigos dos exercícios propostos e explicações nos próprios arquivos `.java`.
+
